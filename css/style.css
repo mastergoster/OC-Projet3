@@ -58,6 +58,12 @@ body {
     color: var(--main-bg-color)
 }
 
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
 /********* Header ***********/
 
 header {
@@ -65,7 +71,7 @@ header {
     justify-content: space-between;
     align-items: flex-start;
     box-sizing: border-box;
-    height: 79px;
+    min-height: 79px;
 }
 
 .logo {
@@ -91,13 +97,10 @@ nav ol {
 
 nav ol li {
     padding-top: 16px;
+
 }
 
-nav ol li a {
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
-}
+
 
 nav ol li:hover {
     border-top: 2px solid var(--main-color);
@@ -106,7 +109,6 @@ nav ol li:hover {
 
 nav ol li:hover a {
     color: var(--main-color);
-
 }
 
 /****** Hebergements And Populaires ***********/
@@ -214,5 +216,42 @@ nav ol li:hover a {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    .main-container {
+        padding: 0px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav,
+    nav ol,
+    nav ol li,
+    nav ol li a {
+        width: 100%;
+        gap: 0px;
+        text-align: center;
+    }
+
+    nav ol li {
+        padding-top: 0px;
+        padding-bottom: 16px;
+
+    }
+
+    nav ol li.active,
+    nav ol li:hover {
+        border-top: 0px solid var(--main-color);
+        padding-top: 0px;
+        border-bottom: 2px solid var(--main-color);
+        padding-bottom: 14px;
+    }
+
+    nav ol li.active a {
+        color: var(--main-color);
+    }
+
+
+
 }
