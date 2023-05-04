@@ -111,6 +111,89 @@ nav ol li:hover a {
     color: var(--main-color);
 }
 
+/********** Infos ***********/
+
+section.infos {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+section.infos .titre {
+    display: flex;
+    flex-direction: column;
+}
+
+section.infos .titre h1 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+section.infos .titre p {
+    font-size: 16px;
+}
+
+form.search-bar {
+    position: relative;
+    height: 49px;
+    max-width: 377px;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    border-radius: 15px;
+
+}
+
+form.search-bar i,
+form.search-bar button i {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+form.search-bar i {
+    background-color: var(--main-bg-color);
+    color: black;
+}
+
+form.search-bar input {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    flex: 1;
+    border: none;
+    border: 2px solid var(--main-bg-color);
+    border-right: none;
+    margin-right: 132px;
+}
+
+form.search-bar button {
+    position: absolute;
+    right: 0;
+    height: 49px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: var(--main-color);
+    width: 132px;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+}
+
+form.search-bar button i {
+    display: none;
+    background-color: var(--main-color);
+    color: white;
+}
+
+
+
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
@@ -251,5 +334,20 @@ nav ol li:hover a {
     nav ol li.active a {
         color: var(--main-color);
     }
+
+    /********** form ***********/
+    form.search-bar button {
+        width: 49px;
+        border-radius: 15px;
+    }
+
+    form.search-bar button span {
+        display: none;
+    }
+
+    form.search-bar button i {
+        display: flex;
+    }
+
 
 }
