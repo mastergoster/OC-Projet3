@@ -8,6 +8,7 @@
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
+    --filter-border-color: #D9D9D9;
 }
 
 .fa-solid {
@@ -28,6 +29,15 @@ body {
     justify-content: center;
     flex-direction: column;
     gap: 30px;
+}
+
+main.container {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 35px;
 }
 
 .section-title {
@@ -54,7 +64,7 @@ body {
     font-weight: 700;
 }
 
-.neutralStar {
+.neutral-star {
     color: var(--main-bg-color)
 }
 
@@ -113,23 +123,18 @@ nav ol li:hover a {
 
 /********** Infos ***********/
 
-section.infos {
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
-}
 
-section.infos .titre {
+section.titre {
     display: flex;
     flex-direction: column;
 }
 
-section.infos .titre h1 {
+section.titre h1 {
     font-size: 22px;
     margin-bottom: 8px;
 }
 
-section.infos .titre p {
+section.titre p {
     font-size: 16px;
 }
 
@@ -167,7 +172,7 @@ form.search-bar input {
     border: none;
     border: 2px solid var(--main-bg-color);
     border-right: none;
-    margin-right: 132px;
+    padding-right: 132px;
 }
 
 form.search-bar button {
@@ -191,6 +196,72 @@ form.search-bar button i {
     color: white;
 }
 
+section.filter-bar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+section.filter-bar h2{
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+section.filter-bar ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+section.filter-bar ul li{
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 19px;
+    border: var(--filter-border-color) 2px solid;
+    border-radius: 25px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section.filter-bar ul li:hover{
+    background-color: var(--filter-bg-color);
+}
+
+section.info-bar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+section.info-bar i{
+    height: 24px;
+    width: 24px;
+    border: var(--filter-border-color) 1px solid;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.info-bar p{
+    font-size: 17px;
+    font-weight: 400;
+}
 
 
 
@@ -210,7 +281,52 @@ form.search-bar button i {
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
+
+.hebergements-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hebergements-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.hebergements-cards .card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: calc(100%/3 - 30px);
+}
+
+.hebergements-cards .card img {
+    width: 100%;
+    height: 124px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.hebergements-cards .card .card-content{
+    margin-left: 15px;
+}
+.hebergements-cards .card .card-content,
+.hebergements-cards .card .card-content .card-txt{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.section-plus{
+    font-size: 18px;
+    font-weight: 700;
+}
+
 
 /****** Populaires ***********/
 .populaires {
@@ -265,6 +381,10 @@ form.search-bar button i {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
+    section.filter-bar h2{
+        width: 100%;
+    }
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -336,6 +456,11 @@ form.search-bar button i {
     }
 
     /********** form ***********/
+
+    form.search-bar input {
+        padding-right: 49px;
+    }
+
     form.search-bar button {
         width: 49px;
         border-radius: 15px;
@@ -347,6 +472,18 @@ form.search-bar button i {
 
     form.search-bar button i {
         display: flex;
+    }
+
+    .info{
+        margin: 0 20px;
+    }
+
+    section.filter-bar ul li{
+        width: calc(50% - 10px);
+    }
+
+    .hebergements-cards .card {
+        width: 100%;
     }
 
 
