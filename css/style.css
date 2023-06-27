@@ -600,9 +600,9 @@ div.info-bar p{
     }
 
     .footer {
-    flex-direction: column;
-    padding: 30px;
-    gap: 50px;
+        flex-direction: column;
+        padding: 30px;
+        gap: 50px;
     }
     
     .footer-column {
