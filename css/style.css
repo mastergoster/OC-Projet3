@@ -241,7 +241,7 @@ section.filter-bar ul li:hover{
     background-color: var(--filter-bg-color);
 }
 
-section.info-bar{
+div.info-bar{
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -249,7 +249,7 @@ section.info-bar{
     gap: 10px;
 }
 
-section.info-bar i{
+div.info-bar i{
     height: 24px;
     width: 24px;
     border: var(--filter-border-color) 1px solid;
@@ -259,7 +259,7 @@ section.info-bar i{
     align-items: center;
 }
 
-section.info-bar p{
+div.info-bar p{
     font-size: 17px;
     font-weight: 400;
 }
@@ -375,6 +375,43 @@ section.info-bar p{
 }
 
 
+.activites {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: right;
+    gap: 30px;
+    padding: 30px;
+}
+
+.activites-cards {
+    display: flex;
+    max-width: 100%;
+    gap: 30px;
+}
+
+.activites-cards .card{
+    width: calc(100%/4 - 15px);
+    display: flex;
+    flex-direction: column;
+    height: 439px;
+    padding: 0px;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+}
+.activites-cards .card img{
+    height: 380px;
+    min-width: 100%;
+}
+
+.activites-cards .card h2{
+    flex: 1;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -414,6 +451,14 @@ section.info-bar p{
 
     .populaires-cards .card-subtitle {
         font-size: 13px;
+    }
+
+    .activites-cards .card {
+        height: 270px;
+    }
+
+    .activites-cards .card img {
+        height: 200px;
     }
 }
 
@@ -504,6 +549,19 @@ section.info-bar p{
     .populaires-cards .card {
         box-sizing: border-box;
         width: 100%;
+    }
+
+    .activites-cards{
+        flex-direction: column;
+    }
+
+    .activites-cards .card {
+        width: 100%;
+        height: 200px;
+    }
+
+    .activites-cards .card img {
+        height: 141px;
     }
 
 
