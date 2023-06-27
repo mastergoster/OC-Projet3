@@ -412,6 +412,42 @@ div.info-bar p{
     text-align: center;
 }
 
+.footer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 30px;
+    background-color: var(--main-bg-color);
+}
+.footer-column{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+}
+
+.footer-column h2{
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.footer-column ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-element{
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--main-txt-color);
+}
+
+
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
@@ -561,6 +597,16 @@ div.info-bar p{
 
     .activites-cards .card img {
         height: 141px;
+    }
+
+    .footer {
+    flex-direction: column;
+    padding: 30px;
+    gap: 50px;
+    }
+    
+    .footer-column {
+        padding: 0px;
     }
 
 
