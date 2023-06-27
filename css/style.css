@@ -379,7 +379,6 @@ div.info-bar p{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: right;
     gap: 30px;
     padding: 30px;
 }
